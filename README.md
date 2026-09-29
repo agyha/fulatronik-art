@@ -1,38 +1,41 @@
-# Fulatronik by Camila — Version 1.0
+# Fulatronik by Camila — Version 2.0
 
-First website release, prepared September 29, 2026. Static HTML, CSS and JavaScript; no installation or build step required for hosting.
+Second website release. Static HTML, CSS, and JavaScript; no build or dependency installation is required for hosting. Start with GITHUB-UPLOAD-INSTRUCTIONS.md.
 
-Start with GITHUB-UPLOAD-INSTRUCTIONS.md for uploading and publishing.
+## What is included
 
-## Included
+- Short artwork-led homepage with four visual previews.
+- Separate The Work, The Art Hall, Meet Camila, and Let’s Connect pages.
+- Three collections containing nine original paintings, plus the master painting.
+- Two walk-through CSS 3D galleries with one-click entry, keyboard/touch movement, turning, exhibit shortcuts, and click-to-enlarge pictures.
+- Graffiti Art Hall: Peace and Love 2026, Live in the moment 2026, and Love Birds 2026.
+- My Style Hall: Bull Shark - 2026 and four labeled temporary reference pictures.
+- Camila’s portrait and statement on an orange background with blue and turquoise painted accents.
+- Mailing list, art inquiry, and events placeholder dialogs.
+- GitHub Pages workflow publishing dist. All local links use relative paths.
 
-- Artwork-led homepage, three collection pages, Camila portrait and artist statement.
-- Graffiti Art Hall: Peace and Love 2026.
-- My Style Hall: Bull Shark - 2026 plus four temporary picture placeholders.
-- CSS 3D wall navigation, gallery alternative, and artwork detail dialogs.
-- Mailing-list, art-inquiry, and Events and Exhibitions placeholder dialogs.
-- GitHub Pages workflow publishing the dist folder.
+## Local preview
 
-## Preview locally
-
-With Node.js installed, open a terminal in this folder and run:
-
-    node preview.mjs
-
-Visit http://localhost:4173. Keep the terminal running; Ctrl+C stops it. If that port is already occupied, use the existing preview or stop its process first. Alternatively, open dist/index.html directly in your browser.
+With Node.js installed, run `node preview.mjs` from this folder and open http://localhost:4173. Keep the terminal open. Ctrl+C stops the server. If the port is occupied, use the existing preview or stop that server first.
 
 ## Editing guide
 
-- dist/index.html: homepage, artist text, contact cards and placeholder dialogs.
-- dist/graffiti-artwild.html: Infinito, Let Life Flow, My Destiny.
-- dist/ocean-currents.html: DNA of the Ocean, Ocean Pulse, When We Meet.
-- dist/the-unseen-vybra.html: Circles, Where Dreams fly, WOW.
-- dist/app.js: openHall configures the hall paintings and remaining placeholders.
-- dist/artworks.js: reference artwork inventory used by the remaining hall placeholders.
-- dist/styles.css: appearance and responsive layouts; later rules override earlier rules.
-- dist/assets/: artwork and portrait files. Keep matching image paths when renaming files.
-- dist/site-config.js: supply mailingListUrl (https signup page) and inquiryUrl (https or mailto) when ready. Empty values show placeholders.
+- dist/index.html: home page previews and hero.
+- dist/work.html: master painting and collection links.
+- dist/art-hall.html: links to both 3D rooms.
+- dist/meet-camila.html: portrait and artist statement.
+- dist/connect.html: contact cards and placeholder dialogs.
+- dist/graffiti-artwild.html, ocean-currents.html, the-unseen-vybra.html: collection paintings and titles.
+- dist/style-hall.js: artwork records and navigation shared by BOTH halls; the graffiti branch contains three paintings, the other branch contains the five My Style exhibits.
+- dist/style-hall.html and graffiti-hall.html: room interfaces.
+- dist/style-hall.css and graffiti-hall.css: room appearance.
+- dist/styles.css: main website appearance; later rules override earlier ones.
+- dist/assets/: artwork, portrait, and background assets.
+- dist/app.js: menus, contact actions, and redirects for old home-section bookmarks.
+- dist/site-config.js: mailingListUrl and inquiryUrl. Empty values show placeholders. Use an HTTPS signup URL or an HTTPS/mailto inquiry destination when ready.
 
-The events card currently opens an Available soon dialog. No forms collect or send data. There is no checkout, backend, or mailing-list service. The 3D hall uses selectable CSS wall views, not free-roaming VR. Google Fonts is optional and system fonts provide a fallback.
+## Current limitations
 
-Artwork and portrait rights remain with their owner. This package grants no redistribution license. No GitHub repository or public website has been created by preparing this archive.
+My Style Hall still has four placeholders. Mailing-list, inquiry, and event services are not connected; no information is collected by the placeholder dialogs. There is no checkout or backend. Optional Google Fonts fall back to system fonts when unavailable.
+
+Artwork and portrait rights remain with their owner. No redistribution license is granted. Preparing this package does not publish the website. Version 1.0 archives remain separate historical snapshots.
