@@ -1,5 +1,5 @@
 'use strict';
-const legacy={work:'work.html',exhibition:'art-hall.html',artist:'meet-camila.html',contact:'connect.html'};
+const legacy={work:'work.html',exhibition:'art-gallery.html',artist:'meet-camila.html',contact:'connect.html'};
 if((location.pathname.endsWith('/')||location.pathname.endsWith('/index.html'))&&legacy[location.hash.slice(1)])location.replace(legacy[location.hash.slice(1)]);
 const year=document.querySelector('#year');if(year)year.textContent=new Date().getFullYear();
 const menu=document.querySelector('.menu-toggle'),nav=document.querySelector('#navigation');
