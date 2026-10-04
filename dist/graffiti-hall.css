@@ -1,1 +1,21 @@
 .graffiti-hall{background:#071f2c;color:#e4f6f6}.graffiti-hall h1{color:#23f2ed}.graffiti-hall #room{background:#135567}.graffiti-hall .wall{background:linear-gradient(0deg,#071e2b 0 5%,#174b58 5.1% 94%,#23f2ed 94.1% 94.5%,#103541 94.6%);border-color:#103541;box-shadow:inset 0 0 130px #23f2ed18}.graffiti-hall .floor{background:repeating-linear-gradient(0deg,transparent 0 398px,#30a6b433 399px 402px),repeating-linear-gradient(90deg,#071e2b 0 398px,#0e2c37 399px 402px)}.graffiti-hall .ceiling{background:#176077}.graffiti-hall .light{background:repeating-linear-gradient(0deg,#b9f4ee 0 380px,#176077 381px 395px);border-color:#7cafb8;box-shadow:0 0 90px #23f2ed55}.graffiti-hall .sign{background:#103541;color:#23f2ed;border-color:#c7d2db}.graffiti-hall .frame{background:#103541}.graffiti-hall .caption{background:#092b32;color:#aefdf3}.graffiti-hall .caption small{color:#aad0d8}.graffiti-hall button{border-color:#30a6b4}.graffiti-hall button:hover{background:#125267}.graffiti-hall .picture:hover{background:none}.graffiti-hall #exhibits{grid-template-columns:repeat(3,1fr)}@media(max-width:650px){.graffiti-hall #exhibits{grid-template-columns:1fr}}
+
+/* Spacious graffiti room with restrained splashes around the exhibits. */
+.graffiti-hall .wall{background-image:url('assets/graffiti-splashes.svg'),linear-gradient(0deg,#071e2b 0 5%,#174b58 5.1% 94%,#23f2ed 94.1% 94.5%,#103541 94.6%);background-size:100% 100%;box-shadow:inset 0 0 80px #23f2ed12}
+.graffiti-hall #room{height:72vh;min-height:420px}
+.graffiti-hall .controls{justify-content:space-between;padding:12px 0;gap:16px}
+.graffiti-hall .buttons{display:flex;gap:6px}.graffiti-hall .buttons button{width:42px;height:40px;padding:4px}
+.graffiti-hall summary{cursor:pointer;font-size:12px;letter-spacing:1px;padding:12px 0}
+.graffiti-hall .help{max-width:370px}.graffiti-hall .exhibit-drawer{border-top:1px solid #30a6b444}
+.graffiti-hall #exhibits{padding:8px 0 16px}.graffiti-hall .caption{background:transparent}
+@media(max-width:650px){.graffiti-hall #room{height:62vh}.graffiti-hall .help{max-width:160px}.graffiti-hall .wall{box-shadow:none}}
+
+.gallery-mode{display:inline-block;margin:0 0 20px;padding:10px 16px;border:1px solid #30a6b4;border-radius:8px;font-size:13px;color:#aefdf3}
+.light-gallery #room,.light-gallery .controls,.light-gallery .exhibit-drawer,.light-gallery #reset{display:none}
+.mobile-paintings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.graffiti-hall .mobile-painting{min-width:0;background:transparent;border:0;padding:0;text-align:center}
+.mobile-painting img{display:block;width:100%;height:auto;border:5px solid #bfcbd0}
+.mobile-painting span{display:block;padding:16px 0;font-size:16px;line-height:1.5}
+.mobile-painting small{display:block;font-size:12px;margin-top:5px}
+@media(max-width:600px){.mobile-paintings{grid-template-columns:1fr}}
+@media(max-width:850px){.graffiti-hall .light,.graffiti-hall .frame{box-shadow:none}.graffiti-hall .wall{background-size:100% 100%;box-shadow:none}}
