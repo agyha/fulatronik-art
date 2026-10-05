@@ -24,3 +24,36 @@
 .mobile-painting small{display:block;font-size:12px;margin-top:5px}
 @media(max-width:600px){.mobile-paintings{grid-template-columns:1fr;gap:24px}}
 @media(max-width:850px){.contemporary-gallery .wall,.contemporary-gallery .partition{background-image:linear-gradient(110deg,#aeb6bc,#d7dce0,#b3bcc2);box-shadow:none}.contemporary-gallery .floor{background-image:repeating-linear-gradient(90deg,#e9eceb 0 1198px,#a3aba9 1199px 1201px)}.contemporary-gallery .sun-patch{display:none}.contemporary-gallery .light{box-shadow:none}}
+
+/* White marble tiles with silver veining and inlaid diamond details. */
+.contemporary-gallery .floor{background-image:url('assets/gallery-silver-marble.svg');background-size:900px 900px;box-shadow:inset 0 0 180px #8798a51a}
+.contemporary-gallery .sun-patch{opacity:.3}
+.artwork-tour{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;border-bottom:1px solid #cdd6d0}
+#tour-status{font-size:13px;text-align:center}.artwork-tour button{font-size:13px}
+.contemporary-gallery .buttons{flex-wrap:wrap}.contemporary-gallery .buttons button{width:auto;min-width:84px;height:40px;padding:8px 12px;font-size:12px}
+.light-gallery .artwork-tour{display:none}
+@media(max-width:650px){.artwork-tour{flex-wrap:wrap}.artwork-tour #tour-status{order:3;width:100%}.contemporary-gallery .buttons{display:grid;grid-template-columns:repeat(3,1fr)}.contemporary-gallery .buttons button{min-width:0;padding:8px}.contemporary-gallery .controls{flex-wrap:wrap}}
+
+/* Cool white neon exhibit lighting. */
+.contemporary-gallery .ceiling{background:linear-gradient(90deg,#b8c1c9,#dce2e7 50%,#b8c1c9)}
+.contemporary-gallery .neon-housing{background:#525e69;border:1px solid #84939e}
+.contemporary-gallery .neon-strip{background:#edffff;border-radius:8px;box-shadow:0 0 22px #c4f5ff,0 0 65px #c4f5ff70}
+.contemporary-gallery .neon-fixture{background:linear-gradient(#485660 0 25%,#eeffff 30% 80%,#93b3c1);border-radius:7px;box-shadow:0 0 18px #d1faff,0 0 45px #c6efff66}
+.contemporary-gallery .art-light-wash{background:radial-gradient(ellipse at 50% 25%,#eaffff45,transparent 68%);pointer-events:none}
+@media(max-width:850px){.contemporary-gallery .neon-strip,.contemporary-gallery .neon-fixture{box-shadow:0 0 12px #d1faff88}.contemporary-gallery .art-light-wash{display:none}}
+
+/* Restore the original blue skylight surround; retain exhibit lighting. */
+.contemporary-gallery .ceiling{background:#e5e9e1}
+
+/* Mobile comfort and lower-cost 3D surfaces. */
+@media(max-width:850px){
+ .contemporary-gallery .mobile-paintings{grid-template-columns:1fr;max-width:560px;margin:auto}
+ .contemporary-gallery .mobile-painting{content-visibility:auto;contain-intrinsic-size:auto 620px}
+ .contemporary-gallery header{flex-wrap:wrap}.contemporary-gallery header span{font-size:12px}
+ .contemporary-gallery #room{height:55svh;min-height:300px}
+ .contemporary-gallery .wall{background-image:linear-gradient(110deg,#adb7bf,#d4dbe0,#b1bdc6);box-shadow:none}
+ .contemporary-gallery .partition{background-image:linear-gradient(110deg,#aeb9c1,#d5dce1);box-shadow:none}
+ .contemporary-gallery .neon-strip,.contemporary-gallery .neon-fixture,.contemporary-gallery .frame{box-shadow:none}
+ .contemporary-gallery .buttons button,.contemporary-gallery .artwork-tour button{min-height:44px}
+ .contemporary-gallery #enlarged{max-height:94svh}.contemporary-gallery #enlarged img{height:60svh}
+}

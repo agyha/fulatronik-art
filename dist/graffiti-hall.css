@@ -19,3 +19,31 @@
 .mobile-painting small{display:block;font-size:12px;margin-top:5px}
 @media(max-width:600px){.mobile-paintings{grid-template-columns:1fr}}
 @media(max-width:850px){.graffiti-hall .light,.graffiti-hall .frame{box-shadow:none}.graffiti-hall .wall{background-size:100% 100%;box-shadow:none}}
+/* Light blue exhibition walls and white / silver patterned marble. */
+.graffiti-hall .wall{background-image:url('assets/graffiti-splashes.svg'),linear-gradient(0deg,#7d9da9 0 3%,#c3e1ef 3.2% 94%,#e9f7fc 94.2% 95%,#9ec8dc 95.2%);background-size:100% 100%;border-color:#8eb5c6;box-shadow:inset 0 0 80px #628ca51a}
+.graffiti-hall .floor{background-image:url('assets/gallery-silver-marble.svg');background-size:900px 900px;background-color:#f8fafb;box-shadow:inset 0 0 180px #8798a51a}
+.graffiti-hall .caption{color:#163e52}.graffiti-hall .caption small{color:#2b5265}
+@media(max-width:850px){.graffiti-hall .wall,.graffiti-hall .floor{box-shadow:none}}
+
+/* Lightweight touch layout; retain the blue walls, splashes and marble. */
+@media(max-width:850px){
+ .graffiti-hall .mobile-paintings{grid-template-columns:1fr;max-width:560px;margin:auto}
+ .graffiti-hall .mobile-painting{content-visibility:auto;contain-intrinsic-size:auto 650px}
+ .graffiti-hall header{flex-wrap:wrap}.graffiti-hall header span{font-size:12px}
+ .graffiti-hall #room{height:55svh;min-height:300px}
+ .graffiti-hall .buttons button{width:48px;height:48px;min-height:44px}
+ .graffiti-hall .controls{flex-wrap:wrap;align-items:start}
+ .graffiti-hall .help{max-width:100%}
+ .graffiti-hall .wall,.graffiti-hall .floor,.graffiti-hall .light,.graffiti-hall .frame{box-shadow:none}
+ .graffiti-hall #enlarged{max-height:94svh}.graffiti-hall #enlarged img{height:60svh}
+ .graffiti-hall #close{min-width:44px;min-height:44px}
+}
+/* Close-fitting silver frames for the Graffiti 3D paintings. */
+.graffiti-hall .picture{text-align:center}
+.graffiti-hall .frame{display:inline-block;vertical-align:top;width:auto;padding:2px;border:5px solid #c6cdd2;border-image:linear-gradient(135deg,#f8fbfd,#9aa7b0 30%,#e4e9ed 55%,#a6b1b9 80%,#f4f7fa) 1;background:#dce2e6;box-shadow:3px 5px 10px #183b4926;line-height:0}
+.graffiti-hall .frame img{display:block;width:auto;height:auto;max-width:700px;max-height:450px;padding:0;border:0;object-fit:contain;background:transparent}
+@media(max-width:850px){.graffiti-hall .frame{box-shadow:none}}
+/* Wider silver floater frames with a recessed shadow gap. */
+.graffiti-hall .frame{padding:12px;border:14px solid #bdc7ce;border-image:linear-gradient(135deg,#fbfdff 0%,#a1adb7 23%,#e9eef2 46%,#b3bec7 72%,#f4f7fa 100%) 1;background:#67747e;box-shadow:inset 0 0 8px #17212b99,5px 8px 16px #183b4938;line-height:0}
+.graffiti-hall .frame img{box-shadow:0 2px 5px 3px #14212c80}
+@media(max-width:850px){.graffiti-hall .frame{box-shadow:inset 0 0 5px #17212b66}.graffiti-hall .frame img{box-shadow:0 1px 3px 2px #14212c66}}

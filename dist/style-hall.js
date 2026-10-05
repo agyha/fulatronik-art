@@ -12,14 +12,17 @@
   {title:'Shadows of the ocean 2026',size:'36*36',file:'shadows-of-the-ocean-2026-36-36.png',x:-1792,z:-700,angle:90,view:{x:-650,z:-700,yaw:-90}},
   {title:'DNA of the Ocean 2026',size:'30*40',file:'dna-of-the-ocean-2026-30-40.png',x:1792,z:-2200,angle:-90,view:{x:650,z:-2200,yaw:90}},
   {title:'Abyssal Reef 2026',size:'20*16',file:'abyssal-reef-2026-20-16.png',x:1792,z:-700,angle:-90,view:{x:650,z:-700,yaw:90}},
-  {title:'Heart in the chaos 2020',size:'24*24',file:'heart-in-the-chaos-2020-24-24.png',x:-950,z:-3192,angle:0,view:{x:-950,z:-2500,yaw:0}}
+  {title:'Heart in the chaos 2020',size:'24*24',file:'heart-in-the-chaos-2020-24-24.png',x:-950,z:-3192,angle:0,view:{x:-950,z:-2500,yaw:0}},
+  {title:'Kinetic current - 2026',size:'30*40',file:'kinetic-current-2026-30-40.png',x:-1792,z:-3000,angle:90,view:{x:-650,z:-3000,yaw:-90}},
+  {title:'The blue enigma - 2026',size:'30*30',file:'the-blue-enigma-2026-30-30.png',x:1792,z:-3000,angle:-90,view:{x:650,z:-3000,yaw:90}}
  ];
 
  // Phones start with a lightweight gallery; visitors can opt into the 3D room.
  const galleryPage=graffiti?'graffiti-gallery.html':'style-gallery.html';
  const lightMode= new URLSearchParams(location.search).get('view')!=='3d' &&
   (matchMedia('(max-width:850px)').matches || navigator.connection?.saveData);
- const preview=work=>'assets/'+work.file.replace('.png','-preview.jpg');
+ const compact=matchMedia('(max-width:850px)').matches || navigator.connection?.saveData;
+ const preview=work=>'assets/'+work.file.replace('.png',compact?'-mobile.jpg':'-preview.jpg');
  {
   const modeLink=document.createElement('a');modeLink.className='gallery-mode';
   modeLink.href=lightMode?galleryPage+'?view=3d':galleryPage+'?view=light';
@@ -72,14 +75,16 @@
  box('partition',1040,970,85,200,15,-2855,true);
  box('partition',520,1050,90,1150,-25,-4300,true);
 
- plane('sun-patch',2500,2900,100,497,-2200,0,90);
- for(const x of [-1200,1200]){
- box('track',22,25,4200,x,-505,-2640);
- for(const z of [-1000,-2400,-3800])box('spot',85,100,95,x,-445,z);
- }
+ 
+ for(const x of [-1050,1050]){box('neon-housing',32,20,4400,x,-555,-2640);plane('neon-strip',18,4400,x,-542,-2640,0,90);}
+ works.forEach(work=>{const a=work.angle*Math.PI/180,nx=Math.sin(a),nz=Math.cos(a);plane('neon-fixture',420,20,work.x+nx*260,-440,work.z+nz*260,work.angle,-35);plane('art-light-wash',900,850,work.x+nx*5,-80,work.z+nz*5,work.angle);});
  plane('rear-title',1250,140,-150,-460,-5272,0,0,'FULATRONIK');
  }
  let pose={x:graffiti?0:-550,z:-350,yaw:graffiti?0:6},entered=false,drag=null,dragged=false,lastFocus=null;
+ let tourIndex=-1;
+ function visitArtwork(index){tourIndex=(index+works.length)%works.length;enter();pose={...works[tourIndex].view};render();const status=document.querySelector("#tour-status");if(status)status.textContent=(tourIndex+1)+" / "+works.length+" · "+works[tourIndex].title;}
+ document.querySelector("#previous-art")?.addEventListener("click",()=>visitArtwork(tourIndex<0?works.length-1:tourIndex-1));
+ document.querySelector("#next-art")?.addEventListener("click",()=>visitArtwork(tourIndex+1));
  const keys=new Set();
  function render(){const focal=Math.min(700,room.clientWidth*.72);room.style.perspective=focal+'px';room.style.perspectiveOrigin='50% 48%';world.style.transform=`translateZ(${focal}px) rotateY(${pose.yaw}deg) translate3d(${-pose.x}px,0,${-pose.z}px)`;}
  function enter(){entered=true;room.focus({preventScroll:true});}
@@ -90,18 +95,18 @@
   const caption=document.createElement('span');caption.className='caption';caption.textContent=work.title;if(work.size){const size=document.createElement('small');size.className='painting-size';size.textContent=work.size||'';caption.append(size);}const note=document.createElement('small');note.textContent=placeholder?'ARTWORK TO BE SELECTED':'FULATRONIK / CAMILA';caption.append(note);button.append(frame,caption);world.append(button);
   function enlarge(){keys.clear();lastFocus=document.activeElement;document.querySelector('#large-image').src='assets/'+work.file;document.querySelector('#large-image').alt=img.alt;const largeTitle=document.querySelector('#large-title');largeTitle.textContent=work.title;if(work.size){const dimensions=document.createElement('small');dimensions.className='painting-size';dimensions.textContent=work.size||'';largeTitle.append(dimensions);}document.querySelector('#large-note').textContent=placeholder?'Temporary reference: Live in the moment. Final artwork to be selected.':'Original artwork by Fulatronik';dialog.showModal();}
   button.addEventListener('click',()=>{if(entered&&!dragged)enlarge();});
-  const visit=document.createElement('button');visit.innerHTML=`<small>EXHIBIT 0${index+1}</small>${work.title}${work.size?'<small class="painting-size">'+work.size+'</small>':''}`;visit.addEventListener('click',()=>{enter();pose={...work.view};render();});document.querySelector('#exhibits').append(visit);
+  const visit=document.createElement('button');visit.innerHTML=`<small>EXHIBIT 0${index+1}</small>${work.title}${work.size?'<small class="painting-size">'+work.size+'</small>':''}`;visit.addEventListener('click',()=>{visitArtwork(index);});document.querySelector('#exhibits').append(visit);
   const accessible=document.createElement('button');accessible.textContent='Enlarge '+work.title;accessible.className='accessible-art';accessible.addEventListener('click',enlarge);document.querySelector('#exhibits').append(accessible);
  });
  document.querySelector('#reset').addEventListener('click',()=>{enter();pose={x:graffiti?0:-550,z:-350,yaw:graffiti?0:6};render();});
- document.querySelector('#close').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>lastFocus?.focus());
- room.addEventListener('keydown',e=>{const k=e.key.toLowerCase();if(['w','a','s','d','arrowleft','arrowright','arrowup','arrowdown'].includes(k)&&entered){if(!keys.has(k)){step(k);render();}keys.add(k);e.preventDefault();}});
+ document.querySelector('#close').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{document.querySelector('#large-image').removeAttribute('src');lastFocus?.focus();});
+ room.addEventListener('keydown',e=>{const k=e.key.toLowerCase();if(['w','a','s','d','arrowleft','arrowright','arrowup','arrowdown'].includes(k)&&entered){if(!keys.has(k)){step(k);render();}keys.add(k);startMotion();e.preventDefault();}});
  function step(k){const previous={...pose};const a=pose.yaw*Math.PI/180;if(k==='arrowleft')pose.yaw-=3;else if(k==='arrowright')pose.yaw+=3;else{const f=['w','arrowup'].includes(k)?1:['s','arrowdown'].includes(k)?-1:0;const s=k==='d'?1:k==='a'?-1:0;pose.x=Math.max(-walkLimit,Math.min(walkLimit,pose.x+(Math.sin(a)*f+Math.cos(a)*s)*25));pose.z=Math.max(-depth+300,Math.min(-250,pose.z+(-Math.cos(a)*f+Math.sin(a)*s)*25));collide(previous);}}
  window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addEventListener('blur',()=>keys.clear());document.addEventListener('visibilitychange',()=>keys.clear());room.addEventListener('blur',()=>keys.clear());
- document.querySelectorAll('[data-key]').forEach(b=>{b.addEventListener('click',e=>{if(e.detail===0){enter();step(b.dataset.key);render();}});b.addEventListener('pointerdown',e=>{enter();step(b.dataset.key);render();keys.add(b.dataset.key);b.setPointerCapture(e.pointerId);e.preventDefault();});['pointerup','pointercancel','lostpointercapture'].forEach(type=>b.addEventListener(type,()=>keys.delete(b.dataset.key)));});
+ document.querySelectorAll('[data-key]').forEach(b=>{b.addEventListener('click',e=>{if(e.detail===0){enter();step(b.dataset.key);render();}});b.addEventListener('pointerdown',e=>{enter();step(b.dataset.key);render();keys.add(b.dataset.key);startMotion();b.setPointerCapture(e.pointerId);e.preventDefault();});['pointerup','pointercancel','lostpointercapture'].forEach(type=>b.addEventListener(type,()=>keys.delete(b.dataset.key)));});
  room.addEventListener('pointerdown',e=>{if(!entered||e.target.closest('#entrance'))return;drag={x:e.clientX,yaw:pose.yaw};dragged=false;room.focus();});
  window.addEventListener('pointermove',e=>{if(!drag)return;const dx=e.clientX-drag.x;if(Math.abs(dx)>5)dragged=true;pose.yaw=drag.yaw-dx*.18;render();});window.addEventListener('pointerup',()=>{drag=null;});window.addEventListener('pointercancel',()=>{drag=null;});
- let last=0;function tick(now){const dt=Math.min((now-last)/1000,.05);last=now;if(entered&&!dialog.open&&keys.size){const previous={...pose};const turn=(keys.has('arrowright')?1:0)-(keys.has('arrowleft')?1:0);pose.yaw+=turn*65*dt;const forward=(keys.has('w')||keys.has('arrowup')?1:0)-(keys.has('s')||keys.has('arrowdown')?1:0);const side=(keys.has('d')?1:0)-(keys.has('a')?1:0);const a=pose.yaw*Math.PI/180,speed=520*dt/(forward&&side?Math.SQRT2:1);pose.x=Math.max(-walkLimit,Math.min(walkLimit,pose.x+(Math.sin(a)*forward+Math.cos(a)*side)*speed));pose.z=Math.max(-depth+300,Math.min(-250,pose.z+(-Math.cos(a)*forward+Math.sin(a)*side)*speed));collide(previous);render();}requestAnimationFrame(tick);}window.addEventListener('resize',render);render();enter();requestAnimationFrame(tick);
+ let last=0,motionFrame=0;function startMotion(){if(!motionFrame){last=performance.now();motionFrame=requestAnimationFrame(tick);}}function tick(now){motionFrame=0;const dt=Math.min((now-last)/1000,.05);last=now;if(entered&&!dialog.open&&keys.size){const previous={...pose};const turn=(keys.has('arrowright')?1:0)-(keys.has('arrowleft')?1:0);pose.yaw+=turn*65*dt;const forward=(keys.has('w')||keys.has('arrowup')?1:0)-(keys.has('s')||keys.has('arrowdown')?1:0);const side=(keys.has('d')?1:0)-(keys.has('a')?1:0);const a=pose.yaw*Math.PI/180,speed=520*dt/(forward&&side?Math.SQRT2:1);pose.x=Math.max(-walkLimit,Math.min(walkLimit,pose.x+(Math.sin(a)*forward+Math.cos(a)*side)*speed));pose.z=Math.max(-depth+300,Math.min(-250,pose.z+(-Math.cos(a)*forward+Math.sin(a)*side)*speed));collide(previous);render();}if(keys.size&&!dialog.open&&!document.hidden)motionFrame=requestAnimationFrame(tick);}window.addEventListener('resize',render);render();enter();
 })();
 
 
