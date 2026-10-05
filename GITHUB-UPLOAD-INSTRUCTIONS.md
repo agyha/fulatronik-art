@@ -1,8 +1,8 @@
-# GitHub upload and publishing — Version 4.0
+# GitHub upload and publishing — Version 5.0
 
 ## 1. Extract the package
 
-Right-click fulatronik-art-v4.0-github.zip and choose Extract All. Upload the extracted contents, not the ZIP itself. The repository root should look like:
+Right-click fulatronik-art-v5.0-github.zip and choose Extract All. Upload the extracted contents, not the ZIP itself. The repository root should look like:
 
     .github/workflows/pages.yml
     .gitignore
@@ -22,14 +22,14 @@ Do not nest everything inside an extra folder in the repository. Include the .gi
 1. Sign in to GitHub and create a new repository, for example fulatronik-art. For GitHub Free, choose a public repository if you want GitHub Pages hosting. Use main as the default branch.
 2. Open the repository. Choose Add file > Upload files (or the uploading an existing file link in an empty repository).
 3. Drag the extracted dist and .github folders, plus the root files listed above, into the upload area. Preserve their folder structure.
-4. Enter a commit message such as Website version 4.0 and commit the files to main. If your repository requires a pull request, merge it into main.
+4. Enter a commit message such as Website version 5.0 and commit the files to main. If your repository requires a pull request, merge it into main.
 5. Confirm that .github/workflows/pages.yml and dist/index.html are present at those exact paths. If your browser omits .github, use Add file > Create new file, enter .github/workflows/pages.yml as its name, and paste the contents of the provided workflow file.
 
 This package is below GitHub's 100-file browser upload limit and each file is below 25 MiB. GitHub Desktop is also an option: clone your repository, copy the extracted contents into that checkout, commit, and push.
 
-## Updating an existing version 1, 2, or 3 repository
+## Updating an existing version 1, 2, 3, or 4 repository
 
-Use the SAME repository to keep your website address. Upload the extracted version 4 contents at its root, preserving the dist and .github folders. Replace same-named files and include all new files. Commit with the message Website version 4.0. Do not upload the ZIP itself or place version 4 inside a nested folder. GitHub Desktop is an alternative: clone the existing repository, copy these contents into the checkout, commit the changes, and push. Keep any existing CNAME/custom-domain configuration. If Pages already uses GitHub Actions, leave that setting unchanged; the commit to main triggers publishing.
+Use the SAME repository to keep your website address. Upload the extracted version 5 contents at its root, preserving the dist and .github folders. Replace same-named files and include all new files. Commit with the message Website version 5.0. Do not upload the ZIP itself or place version 5 inside a nested folder. GitHub Desktop is an alternative: clone the existing repository, copy these contents into the checkout, commit the changes, and push. Keep any existing CNAME/custom-domain configuration. If Pages already uses GitHub Actions, leave that setting unchanged; the commit to main triggers publishing.
 
 ## 3. Publish with GitHub Pages
 
@@ -44,8 +44,8 @@ Future commits to main automatically republish dist. The local localhost URL is 
 ## 4. Check the published site
 
 - Open Home, The Work, The Art Gallery, Meet Camila, and Get in touch. Check all three collection pages and their return links.
-- Enter each gallery in one click. Walk with W/S, step sideways with A/D, turn with arrow keys or drag, try the touch buttons and exhibit shortcuts, and click paintings to enlarge them. Check all three Graffiti paintings and the six My Style paintings.
-- Verify the silver metallic walls, fitted frames, painting sizes, and the updated painting titles.
+- Enter each gallery in one click. Walk with W/S, step sideways with A/D, turn with arrow keys or drag, try the touch buttons and exhibit shortcuts, and click paintings to enlarge them. Check all three Graffiti paintings and the eight My Style paintings.
+- Verify My Style’s blue skylight, neon lighting, marble floor, and Previous/Next controls. Check Graffiti’s light-blue walls, splashes, marble floor, and silver floating frames.
 - Check Camila's portrait and artist statement.
 - Open the mailing-list form on Let’s Connect and Art Inquires on The Art Gallery. Verify form fields load. Events should show Available soon.
 - On a phone, both galleries should start with a lightweight painting list. Tap to enlarge and try optional 3D entry. Check Collection 01 loads its compressed images.
