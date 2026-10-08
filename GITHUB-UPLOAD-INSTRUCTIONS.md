@@ -1,69 +1,35 @@
-# GitHub upload and publishing — Version 5.0
+# Version 6 — GitHub upload instructions
 
-## 1. Extract the package
+## Update the existing website (recommended)
 
-Right-click fulatronik-art-v5.0-github.zip and choose Extract All. Upload the extracted contents, not the ZIP itself. The repository root should look like:
+1. Extract fulatronik-art-v6.0-github.zip to a new folder.
+2. In GitHub Desktop, open or clone your existing website repository and select its main branch. Save any uncommitted work first.
+3. Back up the existing repository's dist folder outside the repository. Preserve any existing CNAME file and your custom-domain settings.
+4. Replace the repository's dist folder with the extracted dist folder. Copy the extracted .github folder and the accompanying files into the repository root. Restore the existing CNAME file if you had one. Do not copy the enclosing extraction folder, the ZIP itself, or previous release ZIPs.
+5. Review the changes in GitHub Desktop, including removed files. Commit with a message such as “Release Fulatronik version 6” and push to main.
+6. On GitHub, open Settings → Pages. Under Build and deployment, select GitHub Actions as the source.
+7. Open Actions and check that “Publish Fulatronik Art” finishes successfully. It publishes the dist folder automatically after a push to main.
+8. Preserve or configure the custom domain fulatronik.art in Pages settings. This package does not change DNS settings. Its search addresses already use https://fulatronik.art/.
+9. Open the live website after deployment, refresh it, and check both galleries on a phone and computer. Check thumbnails, enlarged paintings, Details popups, and the two Google Forms without submitting test responses unintentionally.
 
-    .github/workflows/pages.yml
-    .gitignore
-    README.md
-    GITHUB-UPLOAD-INSTRUCTIONS.md
-    VERSION.txt
-    preview.mjs
-    dist/index.html
-    dist/styles.css
-    dist/app.js
-    dist/assets/...
+Replacing dist rather than merely merging folders removes the old 3D files. Archived 3D components and local development screenshots are intentionally excluded.
 
-Do not nest everything inside an extra folder in the repository. Include the .github folder; it contains the publishing workflow.
+## Upload through the GitHub website
 
-## 2. Upload to GitHub (new repository)
+Extract the ZIP first, then use Add file → Upload files to upload its contents while retaining the folder structure. Ensure .github/workflows/pages.yml is included. Browser uploads do not remove old files: remove obsolete files separately or use the replacement method above. If the upload is rejected because of file or batch limits, use GitHub Desktop.
 
-1. Sign in to GitHub and create a new repository, for example fulatronik-art. For GitHub Free, choose a public repository if you want GitHub Pages hosting. Use main as the default branch.
-2. Open the repository. Choose Add file > Upload files (or the uploading an existing file link in an empty repository).
-3. Drag the extracted dist and .github folders, plus the root files listed above, into the upload area. Preserve their folder structure.
-4. Enter a commit message such as Website version 5.0 and commit the files to main. If your repository requires a pull request, merge it into main.
-5. Confirm that .github/workflows/pages.yml and dist/index.html are present at those exact paths. If your browser omits .github, use Add file > Create new file, enter .github/workflows/pages.yml as its name, and paste the contents of the provided workflow file.
+## New repository
 
-This package is below GitHub's 100-file browser upload limit and each file is below 25 MiB. GitHub Desktop is also an option: clone your repository, copy the extracted contents into that checkout, commit, and push.
+Create a repository, clone it with GitHub Desktop, copy the extracted contents into its root, commit, and push to main. Enable Pages with GitHub Actions as above. If using a different public address, the canonical URLs, sharing URLs, robots.txt, and sitemap.xml must be updated before publishing.
 
-## Updating an existing version 1, 2, 3, or 4 repository
+## Package layout
 
-Use the SAME repository to keep your website address. Upload the extracted version 5 contents at its root, preserving the dist and .github folders. Replace same-named files and include all new files. Commit with the message Website version 5.0. Do not upload the ZIP itself or place version 5 inside a nested folder. GitHub Desktop is an alternative: clone the existing repository, copy these contents into the checkout, commit the changes, and push. Keep any existing CNAME/custom-domain configuration. If Pages already uses GitHub Actions, leave that setting unchanged; the commit to main triggers publishing.
+- dist/ — published website and artwork assets
+- .github/workflows/pages.yml — Pages deployment workflow
+- preview.mjs — optional local preview
+- README.md, VERSION.txt, SEARCH-AND-MARKETING.md — release information
+- GITHUB-UPLOAD-INSTRUCTIONS.md — this guide
 
-## 3. Publish with GitHub Pages
+No spreadsheet, credentials, node_modules, screenshots, or previous release ZIPs are included. External Google Forms and Google Fonts require an internet connection; fonts have local fallbacks.
 
-1. Open repository Settings > Pages.
-2. Under Build and deployment, set Source to GitHub Actions.
-3. The package already includes a workflow; do not add another template.
-4. Open Actions > Publish Fulatronik Art > Run workflow, select main, and run it. If the initial upload run failed before Pages was enabled, rerun it now.
-5. Wait for the deployment to finish successfully. Settings > Pages will show the published URL, typically https://YOUR-USERNAME.github.io/fulatronik-art/.
-
-Future commits to main automatically republish dist. The local localhost URL is only for your own computer. A custom domain can be configured later in Pages settings.
-
-## 4. Check the published site
-
-- Open Home, The Work, The Art Gallery, Meet Camila, and Get in touch. Check all three collection pages and their return links.
-- Enter each gallery in one click. Walk with W/S, step sideways with A/D, turn with arrow keys or drag, try the touch buttons and exhibit shortcuts, and click paintings to enlarge them. Check all three Graffiti paintings and the eight My Style paintings.
-- Verify My Style’s blue skylight, neon lighting, marble floor, and Previous/Next controls. Check Graffiti’s light-blue walls, splashes, marble floor, and silver floating frames.
-- Check Camila's portrait and artist statement.
-- Open the mailing-list form on Let’s Connect and Art Inquires on The Art Gallery. Verify form fields load. Events should show Available soon.
-- On a phone, both galleries should start with a lightweight painting list. Tap to enlarge and try optional 3D entry. Check Collection 01 loads its compressed images.
-- Check the layout on a phone and verify Instagram links.
-
-## Troubleshooting
-
-- 404: confirm Source is GitHub Actions, deployment succeeded, and the workflow uploads dist. Do not select branch-root publishing for this package.
-- Missing pictures: preserve asset filenames and capitalization. Paths must remain relative to each HTML page.
-- Workflow missing: verify .github/workflows/pages.yml was uploaded to the repository root.
-- Different branch name: change branches: [main] in the workflow to match, or use main.
-- Old content: wait for the latest successful deployment and refresh your browser.
-
-## Official references
-
-GitHub file upload instructions:
-https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository
-
-GitHub Pages publishing settings:
-https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-
+GitHub workflow reference: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
