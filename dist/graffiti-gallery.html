@@ -1,11 +1,30 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Graffiti Art Gallery — Fulatronik by Camila</title><link rel="stylesheet" href="style-hall.css"><script src="style-hall.js" defer></script><link rel="stylesheet" href="graffiti-hall.css"></head>
-<body class="graffiti-hall" data-hall="graffiti"><header><a href="art-gallery.html">← Back to the Art Gallery</a><span>FULATRONIK <small>by Camila ♥</small></span><button id="reset">Room overview</button></header>
-<main><div class="heading"><div><p>02 / THE ART GALLERY</p><h1>Graffiti Art Gallery</h1></div><p>Space to explore. Art to feel.</p></div>
-<div id="room" tabindex="0" aria-label="Interactive gallery. W and S walk, A and D move sideways, arrow left and right turn. Drag to look. Click a painting to enlarge."><div id="world"></div><div id="hint">Drag to look · Click art to enlarge</div></div>
-<section class="controls" aria-label="Gallery navigation"><div class="buttons"><button data-key="arrowleft" aria-label="Turn left">↶</button><button data-key="w" aria-label="Walk forward">↑</button><button data-key="s" aria-label="Walk backward">↓</button><button data-key="arrowright" aria-label="Turn right">↷</button></div><details class="help"><summary>How to explore</summary><p>Drag to look. Hold arrows to walk or turn. Keyboard: W/S walk, A/D move sideways, arrow keys turn. Tap a painting to enlarge.</p></details></section>
-<details class="exhibit-drawer"><summary>Choose a painting</summary><nav id="exhibits" aria-label="Visit an exhibit"></nav></details><p class="note">Currently on view: Peace and Love 2026, Free your mind its a vibe 2026, and Love Birds 2026.</p></main>
-<dialog id="enlarged"><button id="close" aria-label="Close enlarged painting">×</button><img id="large-image" alt=""><h2 id="large-title"></h2><p id="large-note"></p></dialog></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Graffiti Art Gallery: Colorful Original Art | Fulatronik</title><link rel="stylesheet" href="gallery-base.css"><script src="graffiti-overview.js" defer></script><link rel="stylesheet" href="graffiti-overview.css">
 
-
-
+<!-- Search metadata -->
+<meta name="description" content="Browse four original graffiti artworks by Fulatronik: Peace and Love, Free your mind its a vibe, Love Birds, and Life in Colors. Click any painting to enlarge it.">
+<meta property="og:title" content="Graffiti Art Gallery: Colorful Original Art | Fulatronik">
+<meta property="og:description" content="Browse four original graffiti artworks by Fulatronik: Peace and Love, Free your mind its a vibe, Love Birds, and Life in Colors. Click any painting to enlarge it.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fulatronik by Camila">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Graffiti Art Gallery: Colorful Original Art | Fulatronik">
+<meta name="twitter:description" content="Browse four original graffiti artworks by Fulatronik: Peace and Love, Free your mind its a vibe, Love Birds, and Life in Colors. Click any painting to enlarge it.">
+<link rel="canonical" href="https://fulatronik.art/graffiti-gallery.html">
+<meta property="og:url" content="https://fulatronik.art/graffiti-gallery.html">
+<meta property="og:image" content="https://fulatronik.art/assets/peace-and-love-2026-preview.jpg">
+<meta property="og:image:alt" content="Original painting by Fulatronik">
+<meta name="twitter:image" content="https://fulatronik.art/assets/peace-and-love-2026-preview.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Graffiti Art Gallery: Colorful Original Art | Fulatronik","description":"Browse four original graffiti artworks by Fulatronik: Peace and Love, Free your mind its a vibe, Love Birds, and Life in Colors. Click any painting to enlarge it.","inLanguage":"en","publisher":{"@type":"Organization","name":"Fulatronik","sameAs":["https://www.instagram.com/fulatronik/"]},"url":"https://fulatronik.art/graffiti-gallery.html"}</script>
+<!-- End search metadata -->
+</head>
+<body class="graffiti-overview"><a class="skip" href="#main">Skip to gallery</a>
+<header><a href="art-gallery.html">← Back to the Art Gallery</a><span>FULATRONIK <small>by Camila ♥</small></span></header>
+<main id="main"><div class="heading"><div><p>02 / THE ART GALLERY</p><h1 class="graffiti-title"><span>Graffiti</span> <span>Art</span> <span>Gallery</span></h1></div><p>Scroll to discover. Click a painting to see it closer.</p></div>
+<section class="graffiti-grid" aria-label="Graffiti artwork overview">
+<button class="graffiti-artwork" data-title="Peace and Love" data-year="2026" data-size="25.5 × 19.5" data-medium="Acrylics and spray paint on paper" aria-label="Enlarge Peace and Love"><img src="assets/peace-and-love-2026-preview.jpg" srcset="assets/peace-and-love-2026-mobile.jpg 640w, assets/peace-and-love-2026-preview.jpg 1000w" sizes="(max-width:650px) 90vw, 45vw" alt="Peace and Love, colorful graffiti painting by Fulatronik" decoding="async"><span>Peace and Love</span></button>
+<button class="graffiti-artwork" data-title="Free your mind its a vibe" data-year="2026" data-size="40 × 30" data-medium="Acrylics and spray paint on canvas" data-description="This is original free designed Graffiti inspired by a free mind and spirit, showing movements and freedom" aria-label="Enlarge Free your mind its a vibe"><img src="assets/free-your-mind-its-a-vibe-2026-30-40-preview.jpg" srcset="assets/free-your-mind-its-a-vibe-2026-30-40-mobile.jpg 640w, assets/free-your-mind-its-a-vibe-2026-30-40-preview.jpg 1000w" sizes="(max-width:650px) 90vw, 45vw" alt="Free your mind its a vibe, layered graffiti painting by Fulatronik" loading="lazy" decoding="async"><span>Free your mind its a vibe</span></button>
+<button class="graffiti-artwork" data-title="Love Birds" data-year="2026" data-size="25.5 × 19.5" data-medium="Acrylics and spray paint on paper" data-description="They can’t live without each other" aria-label="Enlarge Love Birds"><img src="assets/love-birds-2026-preview.jpg" srcset="assets/love-birds-2026-mobile.jpg 640w, assets/love-birds-2026-preview.jpg 1000w" sizes="(max-width:650px) 90vw, 45vw" alt="Love Birds, vibrant bird-inspired graffiti painting by Fulatronik" loading="lazy" decoding="async"><span>Love Birds</span></button>
+<button class="graffiti-artwork" data-title="Life in Colors" data-year="2026" data-size="48 × 36" data-medium="Acrylics and spray paint on canvas" data-description="This graffiti showing the raw and unfiltered energy of an urban city." aria-label="Enlarge Life in Colors"><img src="assets/life-in-colors-2026-preview.jpg" srcset="assets/life-in-colors-2026-mobile.jpg 640w, assets/life-in-colors-2026-preview.jpg 1000w" sizes="(max-width:650px) 90vw, 45vw" alt="Life in Colors, bold colorful graffiti painting by Fulatronik" loading="lazy" decoding="async"><span>Life in Colors</span></button>
+</section><p class="note">Four original artworks by Fulatronik. Select any painting for an enlarged view.</p></main>
+<dialog id="enlarged" aria-labelledby="large-title"><button id="close" aria-label="Close enlarged painting">×</button><img id="large-image" alt=""><h2 id="large-title"></h2><p id="large-note"></p></dialog></body></html>

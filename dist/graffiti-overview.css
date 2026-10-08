@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+.graffiti-overview{background:#c8e2ef;color:#193f52;background-size:cover;background-attachment:scroll}
+.graffiti-overview header{background:#e9f4f9e8;border-bottom:1px solid #8db5c7}
+.graffiti-overview header small{color:#416d83}
+.graffiti-overview main{max-width:1280px;padding:48px 5% 64px}
+.graffiti-overview h1{color:#173e53;font-size:clamp(32px,5vw,60px)}
+.graffiti-overview .heading{margin-bottom:36px}
+.graffiti-overview .heading p{color:#365e73}
+.graffiti-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 36px}
+.graffiti-overview .graffiti-artwork{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;min-width:0;width:100%;padding:20px 20px 0;border:1px solid #b0cad6;border-radius:12px;background:#edf5f9e8;color:#193f52;box-shadow:0 8px 24px #244b6010;transition:transform .2s,box-shadow .2s}
+.graffiti-overview .graffiti-artwork:hover{background:#f7fbfe;transform:translateY(-3px);box-shadow:0 12px 28px #244b6024}
+.graffiti-artwork img{display:block;width:100%;height:auto;object-fit:contain;border:6px solid #c5ced5;border-image:linear-gradient(135deg,#f6f8fa,#a6b2bd,#eef2f5,#a6b2bd) 1}
+.graffiti-artwork span{padding:20px 8px;font-size:18px;line-height:1.4;font-weight:600;text-align:center}
+.graffiti-artwork small{display:block;margin-top:5px;font-size:13px;font-weight:400}
+.graffiti-overview .note{margin-top:40px;font-size:13px;color:#365e73;line-height:1.7}
+.graffiti-overview #enlarged{width:min(1000px,94vw);max-width:94vw;max-height:94svh;overflow:auto;border:1px solid #bac7d1;border-radius:14px;background:linear-gradient(130deg,#d2dae0,#f3f6f8,#dce4e9);color:#193f52;padding:48px 24px 20px;text-align:center}
+.graffiti-overview #enlarged::backdrop{background:#17384799}
+.graffiti-overview #large-image{display:block;margin:auto;width:auto;max-width:100%;height:auto;max-height:70svh;object-fit:contain;border:0}
+.graffiti-overview #large-title{font-size:20px;margin:16px 0 8px}
+.graffiti-overview #large-note{color:#466879;font-size:13px;margin:0}
+.graffiti-overview #close{position:absolute;top:8px;right:10px;width:36px;height:36px;padding:0;border:0;border-radius:50%;background:#d7e2e9;color:#193f52;font-size:26px}
+.graffiti-overview button:focus-visible{outline:3px solid #006cab;outline-offset:5px}
+@media(max-width:650px){.graffiti-grid{grid-template-columns:1fr;gap:28px}.graffiti-overview main{padding:28px 5% 40px}.graffiti-overview .graffiti-artwork{padding:12px 12px 0}.graffiti-overview .heading>p{display:block}.graffiti-overview .heading{display:block}.graffiti-overview #enlarged{padding:48px 12px 16px}.graffiti-overview #large-image{max-height:68svh}.graffiti-overview header span{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.graffiti-overview .graffiti-artwork{transition:none}.graffiti-overview .graffiti-artwork:hover{transform:none}}
+/* My Style retains its quiet silver and mineral background. */
+.style-overview{background:#eeefec;background-image:none;color:#263639}
+.style-overview header{background:#eeefec;border-color:#ced3cf}
+.style-overview h1{color:#263639;font-weight:400;letter-spacing:-2px}
+.style-overview .graffiti-artwork{background:linear-gradient(120deg,#c5cdd3,#f4f6f7 28%,#d9dfe4 52%,#edf0f2 76%,#bec8d0);border-color:#c5cdd3;color:#273440}
+.style-overview #enlarged{background:linear-gradient(120deg,#c5cdd3,#f4f6f7 28%,#d9dfe4 52%,#edf0f2 76%,#bec8d0)}
+.overview-exhibit{position:relative;min-width:0}
+.overview-info{position:absolute;right:18px;bottom:12px;width:40px;height:40px;padding:7px;border:1px solid #adb8c1;border-radius:50%;background:#e5ebef!important}
+.overview-info svg,.overview-description-toggle svg{width:25px;height:25px;color:#0878dc}
+.overview-description-toggle{display:flex;margin:12px auto;gap:8px;align-items:center;padding:8px 16px;border-radius:24px;border:1px solid #adb8c1;background:#e5ebef;color:#273440}
+.overview-description{max-width:440px;margin:12px auto;padding:16px;background:linear-gradient(135deg,#f2f4f6,#cdd5dc,#e9edf0);border-radius:12px;font-size:14px;line-height:1.6;color:#273440}
+.overview-description p{color:inherit;font-size:14px;white-space:pre-wrap}
+.overview-description .overview-story{border:1px solid #adb8c1;border-radius:10px;padding:14px;font-size:15px}
+.overview-description-toggle[hidden],.overview-description[hidden]{display:none}
+.graffiti-overview #enlarged:has(.overview-description:not([hidden])) #large-image{max-height:28svh}
+.graffiti-grid{align-items:start}
+.style-overview #large-title:not(:empty){background:transparent;padding:0;margin:16px 0 8px}
+.style-overview #large-note{background:transparent;padding:0;margin:0}
+.overview-info{display:grid;place-items:center}
+/* Industrial cement backdrop and a visual artwork index. */
+.style-overview{background:#a9aaa2 url('assets/industrial-cement-wall.jpeg') center top / 1100px auto repeat;color:#17242b}
+.style-overview header{background:#e8ebe6dc;backdrop-filter:blur(8px)}
+.style-overview .heading{padding:20px;border-radius:12px;background:#eef0ead9}
+.style-overview .artwork-thumbnails{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:0 0 36px;padding:18px;border-radius:12px;background:#e9ece6b8}
+.style-overview .artwork-thumbnails button{display:grid;place-items:center;width:96px;height:96px;padding:5px;border:1px solid #9da9b0;border-radius:8px;background:linear-gradient(135deg,#f4f6f7,#bec8cf);box-shadow:0 3px 8px #17242b20;transition:transform .2s}
+.style-overview .artwork-thumbnails button:hover{transform:translateY(-3px);background:#f4f7f9}
+.artwork-thumbnails img{display:block;width:100%;height:100%;object-fit:contain;border-radius:3px}
+.style-overview .note{background:#eef0ead9;border-radius:8px;padding:14px;color:#273e49}
+@media(max-width:650px){.style-overview .artwork-thumbnails{gap:10px;padding:12px}.style-overview .artwork-thumbnails button{width:70px;height:70px}.style-overview .heading{padding:16px}.style-overview{background-size:800px auto}}
+@media(prefers-reduced-motion:reduce){.style-overview .artwork-thumbnails button{transition:none}}
+.style-overview .artwork-thumbnails button{position:relative;overflow:hidden}.style-overview .artwork-thumbnails img{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);min-width:0;min-height:0;object-fit:contain}
+/* Brick-wall exhibition with a picture-only artwork index. */
+.graffiti-overview:not(.style-overview){background:#d0d0cb url('assets/graffiti-brick-wall.jpg') center top / 1000px auto repeat;color:#193f52}
+.graffiti-overview:not(.style-overview) header{background:#edf3f4eb}
+.graffiti-overview:not(.style-overview) .heading{padding:20px;border-radius:12px;background:#eef4f5e3}
+.graffiti-overview:not(.style-overview) .note{padding:14px;border-radius:8px;background:#eef4f5e3}
+.graffiti-overview:not(.style-overview) .artwork-thumbnails{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin:0 0 36px;padding:18px;border-radius:12px;background:#e9eff1d9}
+.graffiti-overview:not(.style-overview) .artwork-thumbnails button{position:relative;overflow:hidden;width:96px;height:96px;padding:5px;border:1px solid #9da9b0;border-radius:8px;background:linear-gradient(135deg,#f4f6f7,#bec8cf);box-shadow:0 3px 8px #17242b20;transition:transform .2s}
+.graffiti-overview:not(.style-overview) .artwork-thumbnails button:hover{transform:translateY(-3px);background:#f4f7f9}
+.graffiti-overview:not(.style-overview) .artwork-thumbnails img{position:absolute;inset:5px;width:calc(100% - 10px);height:calc(100% - 10px);min-width:0;min-height:0;object-fit:contain}
+@media(max-width:650px){.graffiti-overview:not(.style-overview){background-size:750px auto}.graffiti-overview:not(.style-overview) .artwork-thumbnails{gap:10px;padding:12px}.graffiti-overview:not(.style-overview) .artwork-thumbnails button{width:70px;height:70px}.graffiti-overview:not(.style-overview) .heading{padding:16px}}
+@media(prefers-reduced-motion:reduce){.graffiti-overview:not(.style-overview) .artwork-thumbnails button{transition:none}}
+
+.graffiti-overview .graffiti-title{font-family:'Sedgwick Ave Display','Segoe Print',cursive;font-weight:400;font-size:clamp(42px,5.5vw,76px);line-height:1.15;letter-spacing:1px;transform:rotate(-2deg);text-shadow:1px 2px 0 #ffffffb3,2px 4px 0 #17384718;padding:8px 0}
+.graffiti-title span:nth-child(1){color:#188c48}.graffiti-title span:nth-child(2){color:#087ed1}.graffiti-title span:nth-child(3){color:#ea7218}
+.style-overview h1{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-weight:600;letter-spacing:-2px;color:#727f89;background:linear-gradient(175deg,#52616d 0%,#85929c 24%,#e2e8ed 42%,#76848f 52%,#455563 67%,#aab6bf 86%,#687883 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 1px 0 #ffffffcc)}
+
+/* Geometric silver lettering inspired by the supplied wall-sign reference. */
+.style-overview h1{font-family:'Montserrat','Century Gothic',Arial,sans-serif;font-weight:800;font-size:clamp(40px,5.2vw,72px);line-height:1.1;letter-spacing:-1.5px;background:linear-gradient(178deg,#4d5962 0%,#8e999f 22%,#eef0f0 43%,#b6bec2 48%,#7e8b93 66%,#cbd1d3 84%,#687780 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:.6px #c5cccf;filter:drop-shadow(1px 1px 0 #f8fafb) drop-shadow(2px 3px 0 #53616a) drop-shadow(0 5px 3px #18252a66);padding:8px 0}/* One-line Montserrat wall lettering with a pronounced embossed edge. */
+.style-overview .heading{display:block;background:transparent;padding:20px 16px 28px}
+.style-overview .heading>div>p{color:#f4f5ef;text-shadow:0 1px 3px #1b252b90;font-size:13px}
+.style-overview .heading>p{color:#f4f5ef;text-shadow:0 1px 3px #1b252b90;margin-top:22px}
+.style-overview h1{display:block;white-space:nowrap;font-family:'Montserrat','Century Gothic',Arial,sans-serif;font-weight:800;font-size:clamp(26px,6.6vw,88px);line-height:1.2;letter-spacing:-.04em;background:linear-gradient(180deg,#687177 0%,#899297 18%,#e5e8e8 38%,#f4f4ef 48%,#acb5ba 60%,#88949b 77%,#c9cfd1 92%,#6f7a80 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-text-stroke:1px #c2c9cc;filter:drop-shadow(0 -1px 0 #f7f9f9) drop-shadow(1px 2px 0 #67737b) drop-shadow(2px 4px 0 #48545c) drop-shadow(3px 6px 0 #35434b) drop-shadow(1px 10px 5px #0c171c99);padding:10px 0 14px;margin:16px 0 0}
+@media(max-width:650px){.style-overview .heading{padding:14px 0 22px}.style-overview h1{font-size:6.7vw;-webkit-text-stroke:.7px #c2c9cc}.style-overview .heading>div>p{font-size:11px}}
