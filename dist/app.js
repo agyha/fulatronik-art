@@ -9,3 +9,5 @@ nav?.addEventListener('click',closeMenu);document.addEventListener('keydown',e=>
 document.querySelectorAll('[data-close]').forEach(b=>b.addEventListener('click',()=>document.getElementById(b.dataset.close)?.close()));
 const config=window.FULATRONIK_SITE||{};
 for(const [id,dialog,url] of [['mailing-list','mailing-dialog',config.mailingListUrl],['art-inquiry','inquiry-dialog',config.inquiryUrl],['events-link','events-dialog',''],['gallery-inquiry','gallery-inquiry-dialog','']])document.getElementById(id)?.addEventListener('click',()=>{if(url&&/^(https:\/\/|mailto:)/i.test(url))window.open(url,'_blank','noopener,noreferrer');else {const popup=document.getElementById(dialog);const form=popup?.querySelector('iframe[data-src]');if(form&&!form.src)form.src=form.dataset.src;popup?.showModal();}});
+
+if(location.hash==='#gallery-inquiry')document.getElementById('gallery-inquiry')?.click();

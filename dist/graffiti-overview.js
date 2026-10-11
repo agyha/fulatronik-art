@@ -14,7 +14,7 @@
   const thumbnails=document.createElement('nav');thumbnails.className='artwork-thumbnails';thumbnails.setAttribute('aria-label','Choose an artwork');
   document.querySelectorAll('.graffiti-artwork').forEach(artwork=>{
    const thumb=document.createElement('button');thumb.setAttribute('aria-label','Enlarge '+artwork.dataset.title);
-   const picture=document.createElement('img');picture.src=artwork.querySelector('img').getAttribute('src').replace('-preview.jpg','-mobile.jpg');picture.alt='';picture.decoding='async';
+   const picture=document.createElement('img');picture.src=artwork.querySelector('img').getAttribute('src').replace('-preview.jpg','-thumb.jpg');picture.alt='';picture.width=180;picture.height=180;picture.decoding='async';
    thumb.append(picture);thumb.addEventListener('click',()=>artwork.click());thumbnails.append(thumb);
   });
   document.querySelector('.heading').after(thumbnails);
