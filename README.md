@@ -1,8 +1,14 @@
-# Fulatronik by Camila — Version 6
+# Fulatronik by Camila — Version 7
 
 A ready-to-publish static art website. All website files are in `dist`; no build step or package installation is required.
 
-## Version 6
+## Version 7
+
+- All published raster images are viewing copies, capped at 1,200 pixels; private originals are excluded.
+- Faster responsive images, artwork search metadata, social previews, and an image sitemap.
+- A colorful Art Inquires popup with the embedded Google Form.
+- Be Loved 2026 on the homepage and the neon orange retro welcome heading in My Style Gallery.
+
 
 - Two scrollable 2D galleries with clickable artwork thumbnails and enlarged paintings.
 - My Style Gallery: eight artworks, industrial cement background, and an embossed metallic Montserrat heading.
