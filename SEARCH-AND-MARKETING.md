@@ -8,4 +8,4 @@ After uploading the updated site, verify fulatronik.art in Google Search Console
 
 Gallery footers link directly to the art inquiry popup and mailing-list page. No tracking service has been installed. Use campaign links with utm_source, utm_medium, and utm_campaign to distinguish marketing sources if analytics is added later. Google Forms responses provide submission counts; opening the form is not a submission.
 
-These changes improve technical readiness; search rankings and marketing results must be measured after publication. Version 7 includes these changes and viewing copies capped at 1,200 pixels.
+These changes improve technical readiness; search rankings and marketing results must be measured after publication. Version 8 includes these changes and viewing copies capped at 1,200 pixels.
