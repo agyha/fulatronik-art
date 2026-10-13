@@ -14,7 +14,7 @@
   const thumbnails=document.createElement('nav');thumbnails.className='artwork-thumbnails';thumbnails.setAttribute('aria-label','Choose an artwork');
   document.querySelectorAll('.graffiti-artwork').forEach(artwork=>{
    const thumb=document.createElement('button');thumb.setAttribute('aria-label','Enlarge '+artwork.dataset.title);
-   const picture=document.createElement('img');picture.src=artwork.querySelector('img').getAttribute('src').replace('-preview.jpg','-thumb.jpg');picture.alt='';picture.width=180;picture.height=180;picture.decoding='async';
+   const picture=document.createElement('img');picture.src=artwork.querySelector('img').getAttribute('src').replace(/-preview\.(?:jpg|webp)$/,'-thumb.jpg');picture.alt='';picture.width=180;picture.height=180;picture.decoding='async';
    thumb.append(picture);thumb.addEventListener('click',()=>artwork.click());thumbnails.append(thumb);
   });
   document.querySelector('.heading').after(thumbnails);
@@ -22,7 +22,8 @@
  document.querySelectorAll('.graffiti-artwork').forEach(button=>{
   button.addEventListener('click',()=>{
    opener=button;
-   image.src=button.querySelector('img').currentSrc;
+   const artworkImage=button.querySelector('img');
+   image.src=artworkImage.currentSrc || artworkImage.src;
    image.alt=button.dataset.title;
    title.textContent=button.dataset.title;
    note.textContent=button.dataset.size ? button.dataset.size+' · Original artwork by Fulatronik' : 'Original artwork by Fulatronik';
@@ -30,7 +31,7 @@
    {
     details.replaceChildren();
     const meta=document.createElement('p');meta.textContent=[button.dataset.size,button.dataset.medium,button.dataset.year].filter(Boolean).join('    ');
-    const story=document.createElement('p');story.className='overview-story';story.textContent=button.dataset.description;
+    const story=document.createElement('p');story.className='overview-story';story.textContent=button.dataset.description || '';
     const credit=document.createElement('p');credit.textContent='Original artwork by Fulatronik';
     if(meta.textContent.trim())details.append(meta);
     if(story.textContent.trim())details.append(story);

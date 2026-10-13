@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /certificate/
 Sitemap: https://fulatronik.art/sitemap.xml
