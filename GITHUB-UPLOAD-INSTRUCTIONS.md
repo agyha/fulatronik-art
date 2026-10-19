@@ -1,12 +1,12 @@
-# Version 8 — GitHub upload instructions
+# Version 9 — GitHub upload instructions
 
 ## Update the existing website (recommended)
 
-1. Extract fulatronik-art-v8.0-github.zip to a new folder.
+1. Extract fulatronik-art-v9.0-github.zip to a new folder.
 2. In GitHub Desktop, open or clone your existing website repository and select its main branch. Save any uncommitted work first.
 3. Back up the existing repository's dist folder outside the repository. Preserve any existing CNAME file and your custom-domain settings.
 4. Replace the repository's dist folder with the extracted dist folder. Copy the extracted .github folder and the accompanying files into the repository root. Restore the existing CNAME file if you had one. Do not copy the enclosing extraction folder, the ZIP itself, or previous release ZIPs.
-5. Review the changes in GitHub Desktop, including removed files. Commit with a message such as “Release Fulatronik version 8” and push to main.
+5. Review the changes in GitHub Desktop, including removed files. Commit with a message such as “Release Fulatronik version 9” and push to main.
 6. On GitHub, open Settings → Pages. Under Build and deployment, select GitHub Actions as the source.
 7. Open Actions and check that “Publish Fulatronik Art” finishes successfully. It publishes the dist folder automatically after a push to main.
 8. Preserve or configure the custom domain fulatronik.art in Pages settings. This package does not change DNS settings. Its search addresses already use https://fulatronik.art/.
@@ -36,9 +36,9 @@ GitHub workflow reference: https://docs.github.com/en/pages/getting-started-with
 
 ## Viewing copies only
 
-This release contains only website viewing copies, capped at 1,200 pixels. Never upload the private-originals-not-for-upload folder or older ZIP packages. Replace the old dist folder completely: simply merging folders would leave old original images publicly accessible. Keep a backup outside the repository and preserve any existing CNAME file.
+This release contains only website viewing copies, capped at 1,200 pixels; the three new Version 9 paintings are capped at 800 pixels, with 480-pixel mobile copies. Never upload the private-originals-not-for-upload folder or older ZIP packages. Replace the old dist folder completely: simply merging folders would leave old original images publicly accessible. Keep a backup outside the repository and preserve any existing CNAME file.
 
-## Certificate check after publishing Version 8
+## Certificate check after publishing Version 9
 
 The certificate PDF is included in dist/certificate/FULA-001.pdf. Confirm https://fulatronik.art/certificate/FULA-001.pdf opens, then scan its QR. Keep the folder and filename unchanged. This certificate is a draft proof of concept, not a signed, issued certificate. Do not order production stickers until the approved PDF is uploaded and its QR tested.
 

@@ -1,8 +1,18 @@
-# Fulatronik by Camila — Version 8
+# Fulatronik by Camila — Version 9
 
 A ready-to-publish static art website. All website files are in `dist`; no build step or package installation is required.
 
-## Version 8
+## Version 9
+
+- Added Nothing is Random and Rare Love at the beginning of Graffiti Art Gallery (six artworks).
+- Added Lost In Tropical Vibes third in My Style Gallery (nine artworks).
+- Added workbook descriptions and matching thumbnails, enlarged views, and Details controls.
+- The three new paintings use compressed viewing copies capped at 800 pixels, with mobile copies capped at 480 pixels. Reduced resolution limits print quality; it cannot prevent printing.
+- Art Inquiries opens all five questions directly, skipping the empty Google Form introduction.
+- Meet Camila now includes consistent Instagram INSIDE MY WORLD and YouTube MY VIDEOS links on the orange background.
+- Updated gallery counts and search metadata.
+
+## Retained website features
 
 - All published raster images are viewing copies, capped at 1,200 pixels; private originals are excluded.
 - Faster responsive images, artwork search metadata, social previews, and an image sitemap.
@@ -11,8 +21,8 @@ A ready-to-publish static art website. All website files are in `dist`; no build
 
 
 - Two scrollable 2D galleries with clickable artwork thumbnails and enlarged paintings.
-- My Style Gallery: eight artworks, industrial cement background, and an embossed metallic Montserrat heading.
-- Graffiti Art Gallery: four artworks, brick background, and a green, blue, and orange graffiti heading.
+- My Style Gallery: nine artworks, industrial cement background, and an embossed metallic Montserrat heading.
+- Graffiti Art Gallery: six artworks, brick background, and a green, blue, and orange graffiti heading.
 - Artwork Details popups use the imported spreadsheet information and skip empty fields.
 - Responsive artwork images, mailing-list and art-inquiry forms, and search metadata for https://fulatronik.art/.
 - The former 3D gallery scripts and textures are excluded from this release.
