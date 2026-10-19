@@ -166,5 +166,26 @@ window.FULATRONIK_ARTWORK_INFO = {
     "size": "30 \u00d7 30",
     "medium": "Acrylics and spray paint on canvas",
     "description": "Deep oceans with many imaginary creatures"
+  },
+  "nothing-is-random-2026": {
+    "title": "Nothing is Random",
+    "year": "2026",
+    "size": "40 \u00d7 40",
+    "medium": "Acrylics and spray paint on canvas",
+    "description": "It features a dynamic mix of colorful apstract spray paint and hand drawn symobols with energetic art"
+  },
+  "rare-love-2026": {
+    "title": "Rare Love",
+    "year": "2026",
+    "size": "36 \u00d7 48",
+    "medium": "Acrylics and spray paint on canvas",
+    "description": "The rarest things in life are not always the easiest to find. Expressive garfitti with vibrant colors"
+  },
+  "lost-in-tropical-vibes-2026": {
+    "title": "Lost In Tropical Vibes",
+    "year": "2026",
+    "size": "48 \u00d7 36",
+    "medium": "Acrylics and spray paint on canvas",
+    "description": "Neither entire nature nor entire street art. A place where instinct and imagination and raw expression collide"
   }
 };

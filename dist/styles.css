@@ -133,3 +133,6 @@ body{overflow-x:clip}.hero{background-size:cover}.header nav{flex-shrink:0}#art-
 
 @media(max-width:600px){.collection-page.theme-graffiti .collection-hero h1{font-size:clamp(48px,12vw,72px);overflow-wrap:normal}.collection-page.theme-graffiti .collection-header{gap:16px}.collection-page.theme-graffiti .collection-artwork{min-width:0}}
 .hall-preview .preview-wall img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:auto;height:80%;max-width:64%;max-height:80%;object-fit:contain}
+
+/* Artist social links */
+#artist .artist-social-link{display:flex;align-items:center;gap:12px;width:fit-content;margin-top:12px;padding:9px 0;border-bottom:1px solid #112d75;background:transparent;color:#112d75;font-size:14px;font-weight:600;letter-spacing:.5px}#artist .artist-social-link .social-link-icon{display:block;width:22px;height:22px;flex:0 0 22px}#artist .artist-social-link:hover{color:#52206f;border-color:#52206f}
