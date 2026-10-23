@@ -43,3 +43,7 @@ This release contains only website viewing copies, capped at 1,200 pixels; the t
 The certificate PDF is included in dist/certificate/FULA-001.pdf. Confirm https://fulatronik.art/certificate/FULA-001.pdf opens, then scan its QR. Keep the folder and filename unchanged. This certificate is a draft proof of concept, not a signed, issued certificate. Do not order production stickers until the approved PDF is uploaded and its QR tested.
 
 The certificate template workbook, generator, private originals, and signature source files are excluded from this website package. Add future approved PDFs using permanent FULA-number filenames in the same folder. The PDFs are publicly accessible by link; robots.txt is not access control or a guarantee against indexing.
+
+## October 23 update
+
+Mind is Magnet and Biometrix are included with viewing copies capped at 640 pixels, mobile copies capped at 360 pixels, and thumbnails capped at 160 pixels. The galleries now contain seven graffiti artworks and ten My Style artworks. Replace dist completely with this latest package.
