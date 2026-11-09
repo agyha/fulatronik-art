@@ -1,6 +1,12 @@
-# Fulatronik by Camila — Version 9
+# Fulatronik by Camila — Version 9.2
 
 A ready-to-publish static art website. All website files are in `dist`; no build step or package installation is required.
+
+## Version 9.2 — November 9, 2026
+
+- My Style Gallery now has thirteen paintings. Frequency Shift and Hidden Radiances open the gallery, and Ocean Turbulence follows Shadows of the ocean. Details come from the artwork workbook.
+- The three new works retain their copyright marks, with 640-pixel enlarged views, 360-pixel mobile copies, and 160-pixel thumbnails.
+- Events and Exhibitions features the November 14 Wynwood pop-up, with hours, venue address, and directions.
 
 ## Updated October 23, 2026
 
@@ -12,7 +18,7 @@ A ready-to-publish static art website. All website files are in `dist`; no build
 ## Version 9
 
 - Added Nothing is Random and Rare Love at the beginning of Graffiti Art Gallery (seven artworks).
-- Added Lost In Tropical Vibes third in My Style Gallery (ten artworks).
+- Added Lost In Tropical Vibes third in My Style Gallery in the initial Version 9 release.
 - Added workbook descriptions and matching thumbnails, enlarged views, and Details controls.
 - The three new paintings use compressed viewing copies capped at 800 pixels, with mobile copies capped at 480 pixels. Reduced resolution limits print quality; it cannot prevent printing.
 - Art Inquiries opens all five questions directly, skipping the empty Google Form introduction.
@@ -28,7 +34,7 @@ A ready-to-publish static art website. All website files are in `dist`; no build
 
 
 - Two scrollable 2D galleries with clickable artwork thumbnails and enlarged paintings.
-- My Style Gallery: ten artworks, industrial cement background, and an embossed metallic Montserrat heading.
+- My Style Gallery: thirteen artworks, industrial cement background, and an embossed metallic Montserrat heading.
 - Graffiti Art Gallery: seven artworks, brick background, and a green, blue, and orange graffiti heading.
 - Artwork Details popups use the imported spreadsheet information and skip empty fields.
 - Responsive artwork images, mailing-list and art-inquiry forms, and search metadata for https://fulatronik.art/.
