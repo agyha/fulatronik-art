@@ -201,5 +201,26 @@ window.FULATRONIK_ARTWORK_INFO = {
     "size": "36 \u00d7 48",
     "medium": "Acrylics and spray paint on canvas",
     "description": "Biometrix explores the connection between nature and technology, where organic movement meets geometric structure. Layers of vibrant colors, flowing energy, and intricate patterns create a visual dialogue between the natural and digital worlds."
+  },
+  "frequency-shift-2026": {
+    "title": "Frequency Shift",
+    "year": "2026",
+    "size": "36 \u00d7 48",
+    "medium": "Acrylics and spray paint on canvas",
+    "description": "An exploration of movement, texture and sudden transitions. A visual presentation of shifting channels, tuning out the noise, and dialing into a higher more vibrant energy"
+  },
+  "hidden-radiances-2026": {
+    "title": "Hidden Radiances",
+    "year": "2026",
+    "size": "36 \u00d7 36",
+    "medium": "Acrylics and spray paint on canvas",
+    "description": "It perfectly balances the deep, mysterious tones at the bottom with the bright, luminous burst cutting through the upper center of the peace."
+  },
+  "ocean-turbulence-2026": {
+    "title": "Ocean Turbulence",
+    "year": "2026",
+    "size": "30 \u00d7 30",
+    "medium": "Acrylics and spray paint on canvas",
+    "description": "Swirling currents and vibrant colors capture the ocean's raw energy, beauty and constant motion"
   }
 };
