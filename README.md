@@ -1,6 +1,10 @@
-# Fulatronik by Camila — Version 9.2
+# Fulatronik by Camila — Version 9.3
 
 A ready-to-publish static art website. All website files are in `dist`; no build step or package installation is required.
+
+## Version 9.3 — November 13, 2026
+
+- Drip Theory is the fourteenth and final painting in My Style Gallery, with its workbook details and watermarked viewing copies capped at 640, 360, and 160 pixels.
 
 ## Version 9.2 — November 9, 2026
 
@@ -34,7 +38,7 @@ A ready-to-publish static art website. All website files are in `dist`; no build
 
 
 - Two scrollable 2D galleries with clickable artwork thumbnails and enlarged paintings.
-- My Style Gallery: thirteen artworks, industrial cement background, and an embossed metallic Montserrat heading.
+- My Style Gallery: fourteen artworks, industrial cement background, and an embossed metallic Montserrat heading.
 - Graffiti Art Gallery: seven artworks, brick background, and a green, blue, and orange graffiti heading.
 - Artwork Details popups use the imported spreadsheet information and skip empty fields.
 - Responsive artwork images, mailing-list and art-inquiry forms, and search metadata for https://fulatronik.art/.
