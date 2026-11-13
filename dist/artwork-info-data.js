@@ -222,5 +222,12 @@ window.FULATRONIK_ARTWORK_INFO = {
     "size": "30 \u00d7 30",
     "medium": "Acrylics and spray paint on canvas",
     "description": "Swirling currents and vibrant colors capture the ocean's raw energy, beauty and constant motion"
+  },
+  "drip-theory-2026": {
+    "title": "Drip Theory",
+    "year": "2026",
+    "size": "48 \u00d7 24",
+    "medium": "Acrylics and spray paint on canvas",
+    "description": "An energetic mixed-media abstract work featuring cascading neaon drip, layered textures and bold geometric color bloscks. Desigend to bring vibrant movement and modern color into any space."
   }
 };
