@@ -228,6 +228,13 @@ window.FULATRONIK_ARTWORK_INFO = {
     "year": "2026",
     "size": "48 \u00d7 24",
     "medium": "Acrylics and spray paint on canvas",
-    "description": "An energetic mixed-media abstract work featuring cascading neaon drip, layered textures and bold geometric color bloscks. Desigend to bring vibrant movement and modern color into any space."
+    "description": "An energetic mixed-media abstract work featuring cascading neon drip, layered textures and bold geometric color block. Design to bring vibrant movement and modern color into any space."
+  },
+  "vortex-of-life-2026": {
+    "title": "Vortex of Life",
+    "year": "2026",
+    "size": "20 \u00d7 20",
+    "medium": "Acrylics paint on canvas",
+    "description": "Magical Spiral a portal of cosmic stardust pulling us into the hidden center of life"
   }
 };

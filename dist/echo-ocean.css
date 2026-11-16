@@ -1,0 +1,12 @@
+.style-overview.echo-ocean-overview {
+  background: #123c55 linear-gradient(#071e3e55,#071e3e80);
+  background-image: linear-gradient(#071e3e55,#071e3e80), url('assets/echo-ocean-background.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.echo-ocean-overview .heading .art-world-welcome {
+  color: #d1fcff;
+  text-shadow: 0 2px 8px #062943, 0 4px 12px #062943;
+}
