@@ -1,6 +1,12 @@
-# Fulatronik by Camila — Version 9.3
+# Fulatronik by Camila — Version 9.4
 
 A ready-to-publish static art website. All website files are in `dist`; no build step or package installation is required.
+
+## Version 9.4 — November 16, 2026
+
+- The Art Gallery now has three galleries: Graffiti, The Unseen Vybra, and Echo of the Ocean. The ocean gallery uses the supplied beach photo and holds six paintings moved from the former My Style Gallery.
+- Lost In Tropical Vibes opens the Graffiti Art Gallery, Vortex of Life closes The Unseen Vybra Gallery, and Biometrix opens The Unseen Vybra Collection 03 under The Work.
+- Added the “One of a kind” gallery lettering, corrected the Drip Theory details, and added the Wynwood pop-up photo and YouTube link to Meet Camila.
 
 ## Version 9.3 — November 13, 2026
 
@@ -37,9 +43,10 @@ A ready-to-publish static art website. All website files are in `dist`; no build
 - Be Loved 2026 on the homepage and the neon orange retro welcome heading in My Style Gallery.
 
 
-- Two scrollable 2D galleries with clickable artwork thumbnails and enlarged paintings.
-- My Style Gallery: fourteen artworks, industrial cement background, and an embossed metallic Montserrat heading.
-- Graffiti Art Gallery: seven artworks, brick background, and a green, blue, and orange graffiti heading.
+- Three scrollable galleries with clickable artwork thumbnails and enlarged paintings.
+- The Unseen Vybra Gallery: seven artworks and an industrial cement background.
+- Echo of the Ocean Gallery: six artworks and a beach photo background.
+- Graffiti Art Gallery: eight artworks, brick background, and a green, blue, and orange graffiti heading.
 - Artwork Details popups use the imported spreadsheet information and skip empty fields.
 - Responsive artwork images, mailing-list and art-inquiry forms, and search metadata for https://fulatronik.art/.
 - The former 3D gallery scripts and textures are excluded from this release.

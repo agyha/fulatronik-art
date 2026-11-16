@@ -1,16 +1,16 @@
-# Version 9.3 — GitHub upload instructions
+# Version 9.4 — GitHub upload instructions
 
 ## Update the existing website (recommended)
 
-1. Extract fulatronik-art-v9.3-github.zip to a new folder.
+1. Extract fulatronik-art-v9.4-github.zip to a new folder.
 2. In GitHub Desktop, open or clone your existing website repository and select its main branch. Save any uncommitted work first.
 3. Back up the existing repository's dist folder outside the repository. Preserve any existing CNAME file and your custom-domain settings.
 4. Replace the repository's dist folder with the extracted dist folder. Copy the extracted .github folder and the accompanying files into the repository root. Restore the existing CNAME file if you had one. Do not copy the enclosing extraction folder, the ZIP itself, or previous release ZIPs.
-5. Review the changes in GitHub Desktop, including removed files. Commit with a message such as “Release Fulatronik version 9.3” and push to main.
+5. Review the changes in GitHub Desktop, including removed files. Commit with a message such as “Release Fulatronik version 9.4” and push to main.
 6. On GitHub, open Settings → Pages. Under Build and deployment, select GitHub Actions as the source.
 7. Open Actions and check that “Publish Fulatronik Art” finishes successfully. It publishes the dist folder automatically after a push to main.
 8. Preserve or configure the custom domain fulatronik.art in Pages settings. This package does not change DNS settings. Its search addresses already use https://fulatronik.art/.
-9. Open the live website after deployment, refresh it, and check both galleries on a phone and computer. Check thumbnails, enlarged paintings, Details popups, and the two Google Forms without submitting test responses unintentionally.
+9. Open the live website after deployment and check all three galleries on a phone and computer. Check thumbnails, enlarged paintings, Details panels, the Wynwood video link, and the two Google Forms without submitting test responses unintentionally.
 
 Replacing dist rather than merely merging folders removes the old 3D files. Archived 3D components and local development screenshots are intentionally excluded.
 
